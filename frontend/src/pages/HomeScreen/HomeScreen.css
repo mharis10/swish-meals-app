@@ -1,0 +1,131 @@
+.home-container {
+  margin: 0 auto;
+  color: white;
+  background-color: #252734;
+}
+
+.home-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #252734;
+}
+
+.home-navigation span {
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.home-navigation button {
+  font-size: 16px;
+  background: none;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  color: white;
+  border-radius: 12px
+}
+
+.home-navigation button:hover {
+  color: black;
+  background-color: #39FE47;
+  border-radius: 12px
+}
+
+.tagline-section {
+  display: flex;
+  padding: 100px 0px 80px 40px;
+  text-align: center;
+}
+
+.tagline-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.tagline-section p {
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+.tagline-container {
+  text-align: left;
+}
+
+.image-container {
+  background: url('../../assets/mealkits.png') no-repeat center center;
+  background-size: contain;
+  width: 50%;
+  height: 200px;
+  scale: 1.5;
+  margin: 0% 10% 0% 12%;
+  display: inline-block;
+}
+
+.how-it-works {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 40px 40px 80px 40px;
+}
+
+.how-it-works .step {
+  width: 30%;
+}
+
+.how-it-works h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.why-choose-us {
+  padding: 40px 40px 80px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-choose-us .reason {
+  width: 30%;
+}
+
+.icon1 {
+  background: url('../../assets/icon1.png') no-repeat center center;
+  background-size: contain;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.icon2 {
+  background: url('../../assets/icon2.png') no-repeat center center;
+  background-size: contain;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.icon3 {
+  background: url('../../assets/icon3.png') no-repeat center center;
+  background-size: contain;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.faq {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 40px 40px 80px 40px;
+}
+
+.question {
+    padding: 20px;
+    text-align: left;
+}

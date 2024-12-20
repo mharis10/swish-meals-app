@@ -1,0 +1,402 @@
+.buy-container {
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.buy-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.buy-navigation span {
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.buy-navigation button {
+  font-size: 16px;
+  background: none;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px
+}
+
+.buy-navigation button:hover {
+  background-color: #f0f0f0;
+}
+
+.buy-tagline-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.buy-tagline-section h1 {
+  margin-bottom: 20px;
+}
+
+.order-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.meal-selection {
+  width: 60%;
+  padding: 20px;
+  text-align: left;
+}
+
+.meal {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.meal h3 {
+  margin-top: 0%;
+}
+
+.meal select {
+  padding: 5px;
+}
+
+.photo-placeholder {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meal-description {
+  flex-grow: 1;
+}
+
+.bill-section {
+  width: 30%;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.bill-item,
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.bill-total {
+  padding-bottom: 40px;
+}
+
+.meal-selection h2,
+.bill-section h2 {
+  padding-bottom: 30px;
+}
+
+.continue-button {
+  width: 80%;
+  margin-left: 50px;
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background-color: #333;
+}
+
+.manage-subscription-button {
+  width: 80%;
+  margin-left: 50px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.manage-subscription-button:hover {
+  background-color: cornflowerblue;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .bill-section {
+    width: 100%;
+    border-left: none;
+    margin-top: 20px;
+  }
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 400px;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.dropdown-selected {
+  padding: 10px;
+  margin-left: -200px;
+}
+
+.input-field {
+  margin-bottom: 15px;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-field textarea {
+  width: 100%; /* This will make the textarea stretch to the full width of its parent container */
+  height: 40px; /* Adjust this value to match the height of your apartment number input field */
+  border: 1px solid #cccccc;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  resize: none; /* This prevents the user from resizing the textarea */
+}
+
+.delete-meal {
+  cursor: pointer;
+  color: #ff0000;
+  font-size: 16px; 
+}
+
+.delete-meal:hover {
+  color: #cc0000;
+}
+
+.recommended-label {
+  background-color: #4caf50;
+  color: white; 
+  padding: 2px 6px; /* Padding around the text */
+  margin-left: 10px; /* Space from the meal name */
+  border-radius: 4px; 
+  font-size: 0.8em; 
+}
+
+.meal-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+}
+
+.meal-card {
+  width: 15%; /* Adjusts to fit 4 cards in a row */
+  margin: 20px; /* Space between rows */
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures nothing spills out of the card borders */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+.meal-card:hover {
+  transform: scale(1.03); /* Slightly enlarges the card on hover */
+}
+
+.meal-card-content {
+  padding: 16px; /* Padding around the content inside the card */
+}
+
+.meal-photo {
+  width: 100%; /* Ensures the photo covers the width of the card */
+  height: 150px; /* Fixed height for the photo */
+  background-color: #f0f0f0; /* Placeholder color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* Larger text for the placeholder */
+  color: #ccc; /* Light grey color for the placeholder text */
+  margin-bottom: 15px; /* Space between the photo and the text below */
+}
+
+.meal-info {
+  text-align: center; /* Centers the text within the meal info section */
+}
+
+.meal-info h3,
+.meal-info p {
+  margin: 5px 0;
+}
+
+.meal-info button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.meal-info button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .meal-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .meal-card {
+    width: 100%;
+  }
+}
+
+.side-dish-dropdown {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-dish-dropdown select {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.side-dish-dropdown select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .side-dish-dropdown {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .side-dish-dropdown select {
+    width: 100%;
+  }
+}
+
+.meal-quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+  margin: auto;
+  padding: 20px;
+}
+
+.meal-quantity-controls span {
+  font-size: 16px;
+  width: 30px;
+  text-align: center;
+}
+
+.meal-quantity-controls svg {
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.meal-quantity-controls svg:hover {
+  color: #017cff;
+}
+
+.side-dish-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.side-dish-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.side-dish-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  width: 30%;
+}
+
+.side-dish-card:hover {
+  border-color: #444444;
+}
+
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch.on {
+  background-color: #252734;
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch.on::after {
+  transform: translateX(20px);
+}
+
+.subscription-delay-message {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  width: 80%;
+  margin-left: 55px;
+  margin-top: 15px;         /* Decreased margin-top */
+  padding: 8px;
+  background-color: #f3f4f6; /* Light grey background */
+  font-family: Arial;
+  font-size: 14px;
+}
+

@@ -1,0 +1,416 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.logo-image {
+  background: url('./assets/logo.png') no-repeat center center;
+  background-size: contain;
+  scale: 2;
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+}
+
+.logo-main {
+  background: url('./assets/logo-white.png') no-repeat center center;
+  background-size: contain;
+  scale: 2;
+  width: 100px;
+  height: 50px;
+  margin-left: 54px;
+  margin-bottom: 13px;
+}
+
+.logo-image-white {
+  background: url('./assets/logo-white.png') no-repeat center center;
+  background-size: contain;
+  transform: scale(2); /* Corrected property name */
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+  display: block; /* Ensures the logo behaves consistently as a block element */
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.admin-panel {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .admin-panel {
+    flex-direction: column; /* Stack nav and dashboard on smaller screens */
+  }
+}
+
+.side-nav {
+  background-color: #343a40; /* Dark grey background */
+  color: white;
+  min-height: 100vh; /* Full height */
+  width: 250px; /* Set a fixed width */
+  padding: 20px; /* Some padding */
+  box-sizing: border-box; /* To ensure padding doesn't affect the width */
+}
+
+.side-nav h2 {
+  margin-bottom: 20px; /* Space below the header */
+  color: #f8f9fa; /* Light color for the text */
+  font-weight: lighter; /* Less bold */
+}
+
+.side-nav ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.side-nav ul li {
+  padding: 10px 0; /* Add some padding to each list item */
+}
+
+.side-nav ul li a {
+  color: #f8f9fa; /* Light color for links */
+  text-decoration: none; /* Remove underlines */
+  display: block; /* Make the entire area clickable */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.side-nav ul li a:hover,
+.side-nav ul li a:focus {
+  background-color: grey; /* Light blue background on hover/focus */
+  color: #ffffff; /* White text on hover/focus */
+  padding-left: 10px; /* Move text slightly to the right */
+  border-radius: 5px; /* Rounded corners on hover/focus */
+}
+
+/* Optional: Add responsiveness to the navigation bar */
+@media (max-width: 768px) {
+  .side-nav {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Auto height */
+    position: relative; /* Adjust position */
+  }
+  .side-nav h2,
+  .side-nav ul {
+    text-align: center; /* Center align the text */
+  }
+  .side-nav ul li a {
+    padding: 10px; /* Add more padding for easier touch */
+  }
+}
+
+.side-nav .back-link {
+  margin-bottom: 20px; /* Spacing between back link and the rest of the nav items */
+}
+
+.side-nav .back-to-home {
+  display: flex;
+  align-items: center; /* Aligns the icon with the text vertically */
+  color: #ffffff; /* White text to match the nav theme */
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  padding: 8px 0; /* Padding for the link */
+  font-size: 16px;
+}
+
+.side-nav .back-to-home:hover {
+  color: #ddd; /* Lighter color on hover for feedback */
+}
+
+.side-nav .back-to-home svg {
+  margin-right: 8px; /* Space between the icon and text */
+}
+
+.meals-admin {
+  width: 100%;
+  max-width: 1200px; /* Adjust based on preference */
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-button,
+.update-button,
+.edit-button,
+.delete-button,
+.confirm-delete,
+.cancel-button {
+  padding: 8px 12px;
+  margin: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.edit-button,
+.update-button {
+  background-color: #2196f3; /* Blue */
+  color: white;
+}
+
+.delete-button,
+.confirm-delete {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.cancel-button {
+  background-color: #757575; /* Grey */
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.meals-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.meals-table th,
+.meals-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.meal-modal {
+  position: fixed; /* Use fixed position to stay in view */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  width: auto; /* Auto width based on content, with min and max */
+  max-width: 600px; /* Maximum width */
+  min-width: 300px; /* Minimum width to ensure readability */
+  background-color: #fff; /* Background color */
+  padding: 20px; /* Padding inside the modal */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  z-index: 1000; /* Ensure modal is above other content */
+}
+
+/* Overlay background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Below the modal but above other content */
+}
+
+.meals-modal-content h2 {
+  margin-top: 0; /* Remove top margin for the first element */
+  color: #333; /* Dark color for contrast */
+}
+
+.modal-form .form-group {
+  margin-bottom: 15px; /* Spacing between form groups */
+}
+
+.modal-form input[type='text'],
+.modal-form textarea,
+.modal-form input[type='number'] {
+  width: 100%; /* Full width */
+  padding: 8px; /* Padding for input fields */
+  margin-top: 5px; /* Space above */
+  box-sizing: border-box; /* Include padding and border in element's width */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.modal-form .form-actions {
+  text-align: right; /* Align buttons to the right */
+}
+
+@media (max-width: 768px) {
+  .meal-modal {
+    width: 90%; /* Take more width on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+
+.meal-modal button {
+  cursor: pointer; /* Indicate clickable */
+  font-weight: bold; /* Make text bold */
+}
+
+.meal-modal button:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+}
+
+.orders-admin {
+  width: 100%;
+  max-width: 1400px; /* Adjust based on preference */
+  margin: 0 auto;
+}
+
+.orders-table {
+  width: 120%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.stats-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px; /* Adjust the space between buttons */
+}
+
+.stats-buttons button {
+  padding: 10px 15px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.stats-buttons button:hover {
+  background-color: #367c39; /* Darker green */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.stats-buttons button:focus {
+  outline: none; /* Remove focus outline for cleaner look */
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.stats-table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-table thead {
+  background-color: #f5f5f5;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.stats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.no-data {
+  color: #999999;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.date-selection input {
+  margin: 3rem 3rem 3rem 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.date-selection button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.date-selection button:hover {
+  background-color: #367c39;
+  transform: translateY(-2px);
+}
+
+.date-selection button:focus {
+  outline: none;
+}
